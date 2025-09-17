@@ -1,0 +1,6 @@
+#include <nordic/nrf52840_qiaa.dtsi>
+
+
+chosen{
+    zmk,battery = &vbat
+}

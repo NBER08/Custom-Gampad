@@ -1,0 +1,18 @@
+# Holyiot 18010 board configuration
+# Copyright (c) 2025 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+# HOLYIOT 18010 board configuration
+
+CONFIG_FUEL_GAUGE=y
+CONFIG_ZMK_MAX17048=y
+
+max17048: max17048@36 {
+    compatible = "zmk,maxim-max17048";
+    reg = <0x36>;
+    status = "okay";
+};
+
+chosen {
+    zmk,battery = &max17048;
+};
+
