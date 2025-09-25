@@ -16,3 +16,12 @@ chosen {
     zmk,battery = &max17048;
 };
 
+if SHIELD_MACRO
+
+config ZMK_KEYBOARD_NAME
+    default "MACRO"
+
+endif # SHIELD_MACRO
+
+config SHIELD_MACRO
+    def_bool $(shields_list_contains,macro)
